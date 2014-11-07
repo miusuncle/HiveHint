@@ -12,24 +12,29 @@ FOLDERS = hive_loader.FOLDERS
 
 class PickAssetRefCommand(sublime_plugin.WindowCommand):
 	def run(self):
+		self.do_exec(False)
+
+	def is_visible(self):
+		return self.do_exec(True)
+
+	def do_exec(self, preflight):
 		rel_path = self.get_relative_path()
+		if not rel_path: return False
 		ref, ext = path.splitext(rel_path)
 
 		if ext == '.js':
-			sublime.set_clipboard(ref)
+			return True if preflight else sublime.set_clipboard(ref)
 		elif ext == '.html':
 			dirname, basename = path.split(rel_path)
 			dirname = path.split(dirname)[-1]
 
 			if dirname == 'templates':
 				ref = './' + '/'.join([dirname, basename])
-				sublime.set_clipboard(ref)
-
-	def is_visible(self):
-		rel_path = self.get_relative_path()
-		if not rel_path: return False
-		file_ext = path.splitext(rel_path)[-1]
-		return file_ext in ['.js', '.html']
+				return True if preflight else sublime.set_clipboard(ref)
+			else:
+				return False
+		else:
+			return False
 
 	def description(self):
 		rel_path = self.get_relative_path()

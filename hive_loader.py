@@ -14,9 +14,11 @@ class HiveLoader():
 		# inject `FOLDERS`
 		for folder in settings.get('scripts_root', []):
 			folder = str(folder).rstrip('\/\\')
+
 			if sublime.platform() == 'windows':
 				folder = path.normpath(folder)
 				folder = re.sub(r'^\\([A-Za-z])(?=\\)', r'\1:', folder)
+
 			self.FOLDERS.append(folder)
 
 		# inject `MIDS`
