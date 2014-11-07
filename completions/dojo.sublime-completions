@@ -1,0 +1,53 @@
+{
+	"scope": "source.js - string",
+	"completions": [
+		{ "trigger": "pspublish", "contents": "topic.publish('${1:topic}', ${2:params...})" },
+		{ "trigger": "pssubscribe", "contents": "topic.subscribe('${1:topic}', ${2:listener})" },
+
+		{ "trigger": "apbefore", "contents": "aspect.before(${1:target}, '${2:methodName}', ${3:advisingFunction})" },
+		{ "trigger": "aparound", "contents": "aspect.around(${1:target}, '${2:methodName}', ${3:advisingFactory})" },
+		{ "trigger": "apafter", "contents": "aspect.after(${1:target}, '${2:methodName}', ${3:advisingFunction}, ${4:receiveArguments})" },
+
+		{ "trigger": "aryindexOf", "contents": "array.indexOf(${1:a}, ${2:s})" },
+		{ "trigger": "arylastIndexOf", "contents": "array.lastIndexOf(${1:a}, ${2:s})" },
+
+		{ "trigger": "aryforEach", "contents": "array.forEach(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "aryfilter", "contents": "array.filter(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "arymap", "contents": "array.map(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "arysome", "contents": "array.some(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "aryevery", "contents": "array.every(${1:a}, ${2:f}${4:, ${3:o}})" },
+
+		{ "trigger": "fpbuildLambda", "contents": "functional.buildLambda(${1:s})" },
+		{ "trigger": "fpclearLambdaCache", "contents": "functional.clearLambdaCache()" },
+		{ "trigger": "fpevery", "contents": "functional.every(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpeveryRev", "contents": "functional.everyRev(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpfilter", "contents": "functional.filter(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpfilterIn", "contents": "functional.filterIn(${1:obj}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpfilterRev", "contents": "functional.filterRev(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpfoldl", "contents": "functional.foldl(${1:a}, ${2:f}, ${3:z}${5:, ${4:o}})" },
+		{ "trigger": "fpfoldl1", "contents": "functional.foldl1(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpfoldr", "contents": "functional.foldr(${1:a}, ${2:f}, ${3:z}${5:, ${4:o}})" },
+		{ "trigger": "fpfoldr1", "contents": "functional.foldr1(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpforEach", "contents": "functional.forEach(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpforEachRev", "contents": "functional.forEachRev(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpforIn", "contents": "functional.forIn(${1:obj}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpkeys", "contents": "functional.keys(${1:obj})" },
+		{ "trigger": "fplambda", "contents": "functional.lambda(${1:s})" },
+		{ "trigger": "fpmap", "contents": "functional.map(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpmapIn", "contents": "functional.mapIn(${1:obj}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpmapRev", "contents": "functional.mapRev(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fprawLambda", "contents": "functional.rawLambda(${1:s})" },
+		{ "trigger": "fpreduce", "contents": "functional.reduce(${1:a}, ${2:f}, ${3:z})" },
+		{ "trigger": "fpreduceRight", "contents": "functional.reduceRight(${1:a}, ${2:f}, ${3:z})" },
+		{ "trigger": "fprepeat", "contents": "functional.repeat(${1:n}, ${2:f}, ${3:z})${5:, ${4:o}}" },
+		{ "trigger": "fpscanl", "contents": "functional.scanl(${1:a}, ${2:f}, ${3:z}${5:, ${4:o}})" },
+		{ "trigger": "fpscanl1", "contents": "functional.scanl1(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpscanr", "contents": "functional.scanr(${1:a}, ${2:f}, ${3:z}${5:, ${4:o}})" },
+		{ "trigger": "fpscanr1", "contents": "functional.scanr1(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpsome", "contents": "functional.some(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpsomeRev", "contents": "functional.someRev(${1:a}, ${2:f}${4:, ${3:o}})" },
+		{ "trigger": "fpunfold", "contents": "functional.unfold(${1:pr}, ${2:f}, ${3:g}, ${4:z}${6:, ${5:o}})" },
+		{ "trigger": "fpuntil", "contents": "functional.until(${1:pr}, ${2:f}, ${3:z}${5:, ${4:o}})" },
+		{ "trigger": "fpvalues", "contents": "functional.values(${1:obj})" }
+	]
+}

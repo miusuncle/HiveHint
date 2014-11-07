@@ -1,0 +1,84 @@
+[{
+	"id": "tools",
+	"children": [
+		{
+			"caption": "Hive Hint",
+			"children": [
+				{
+					"caption": "Reveal Underneath Module Definition",
+					"command": "goto_anyplace"
+				},
+				{
+					"caption": "Goto Symbol Definition",
+					"command": "goto_anyplace",
+					"args": { "symbol_mode": true }
+				},
+
+				{ "caption": "-" },
+				{
+					"caption": "Insert Module Id",
+					"command": "insert_module_id"
+				},
+				{
+					"caption": "Hint Preset Module Definition",
+					"command": "goto_module_definition"
+				},
+
+				{ "caption": "-" },
+				{
+					"caption": "Hive Hint Settings",
+					"command": "open_file",
+					"args": {
+						"file": "${packages}/HiveHint/HiveHint.sublime-settings"
+					}
+				},
+				{
+					"caption": "Config Dojo Completions",
+					"command": "open_file",
+					"args": { "file": "${packages}/HiveHint/completions/dojo.sublime-completions" }
+				},
+
+				{ "caption": "-" },
+				{
+					"command": "open_file",
+					"args": {
+						"file": "${packages}/HiveHint/Default (Windows).sublime-keymap",
+						"platform": "Windows"
+					},
+					"caption": "Key Bindings – Default"
+				},
+				{
+					"command": "open_file",
+					"args": {
+						"file": "${packages}/HiveHint/Default (OSX).sublime-keymap",
+						"platform": "OSX"
+					},
+					"caption": "Key Bindings – Default"
+				},
+				{
+					"command": "open_file",
+					"args": {
+						"file": "${packages}/User/Default (Windows).sublime-keymap",
+						"platform": "Windows"
+					},
+					"caption": "Key Bindings – User"
+				},
+				{
+					"command": "open_file",
+					"args": {
+						"file": "${packages}/User/Default (OSX).sublime-keymap",
+						"platform": "OSX"
+					},
+					"caption": "Key Bindings – User"
+				},
+
+				{ "caption": "-" },
+				{
+					"caption": "README.md",
+					"command": "open_file",
+					"args": { "file": "${packages}/HiveHint/README.md" }
+				}
+			]
+		}
+	]
+}]

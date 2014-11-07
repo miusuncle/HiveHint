@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+data-dojo-method="$0"
+]]></content>
+	<tabTrigger>ddm</tabTrigger>
+	<scope>text.html</scope>
+</snippet>

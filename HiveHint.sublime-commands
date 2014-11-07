@@ -1,0 +1,37 @@
+[
+	{
+		"caption": "HiveHint: Reveal Underneath Module Definition",
+		"command": "goto_anyplace"
+	},
+	{
+		"caption": "HiveHint: Goto Symbol Definition",
+		"command": "goto_anyplace",
+		"args": { "symbol_mode": true }
+	},
+
+	{
+		"caption": "HiveHint: Insert Module Id",
+		"command": "insert_module_id"
+	},
+	{
+		"caption": "HiveHint: Hint Preset Module Definition",
+		"command": "goto_module_definition"
+	},
+
+	{
+		"caption": "HiveHint: Hive Hint Settings",
+		"command": "open_file",
+		"args": { "file": "${packages}/HiveHint/HiveHint.sublime-settings" }
+	},
+	{
+		"caption": "HiveHint: Config Dojo Completions",
+		"command": "open_file",
+		"args": { "file": "${packages}/HiveHint/completions/dojo.sublime-completions" }
+	},
+
+	{
+		"caption": "HiveHint: README",
+		"command": "open_file",
+		"args": { "file": "${packages}/HiveHint/README.md" }
+	}
+]

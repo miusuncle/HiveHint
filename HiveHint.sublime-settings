@@ -1,0 +1,153 @@
+{
+	// This option used for `Copy Module Id` & `Copy relative template path`
+	// Specify your `scripts root directories`,
+	// therefore hive hint knows how to resolve module id path
+	"scripts_root": [],
+
+	// This option used for `Goto Symbol Definition`
+	// When there is a single match, whether jump to it directly
+	"prefer_dart": false,
+
+	"dojo_mids": [
+		// ********************************
+		// dojo module ids go here
+		// ********************************
+		["dojo/_base/declare", "declare"],
+		["dojo/_base/lang", "lang"],
+		["dojo/_base/array", "array"],
+		["dojo/_base/unload", "baseUnload"],
+		["dojo/_base/Color", "Color"],
+
+		["dojo/_base/fx", "baseFx"],
+		["dojo/fx", "fx"],
+
+		["dojo/router", "router"],
+		["dojo/back", "back"],
+		["dojo/hash", "hash"],
+
+		["dojo/mouse", "mouse"],
+		["dojo/touch", "touch"],
+		["dojo/keys", "keys"],
+
+		["dojo/window", "window"],
+		["dojo/ready", "ready"],
+		["dojo/parser", "parser"],
+		["dojo/aspect", "aspect"],
+		["dojo/topic", "topic"],
+		["dojo/cookie", "cookie"],
+		["dojo/on", "on"],
+		["dojo/Evented", "Evented"],
+		["dojo/Stateful", "Stateful"],
+		["dojo/json", "JSON"],
+		["dojo/io-query", "ioQuery"],
+
+		["dojo/string", "string"],
+		["dojo/date", "date"],
+		["dojo/number", "number"],
+		["dojo/currency", "currency"],
+
+		["dojo/Deferred", "Deferred"],
+		["dojo/when", "when"],
+		["dojo/promise/all", "all"],
+		["dojo/promise/first", "first"],
+
+		["dojo/request", "request"],
+		["dojo/request/registry", "request"],
+		["dojo/request/notify", "notify"],
+		["dojo/request/handlers", "handlers"],
+		["dojo/request/xhr", "xhr"],
+		["dojo/request/iframe", "iframe"],
+		["dojo/request/script", "script"],
+		["dojo/request/node", "nodeRequest"],
+
+		["dojo/dom", "dom"],
+		["dojo/dom-attr", "domAttr"],
+		["dojo/dom-class", "domClass"],
+		["dojo/dom-construct", "domConstruct"],
+		["dojo/dom-form", "domForm"],
+		["dojo/dom-geometry", "domGeom"],
+		["dojo/dom-prop", "domProp"],
+		["dojo/dom-style", "domStyle"],
+		["dojo/dom-html", "html"],
+
+		["dojo/query", "query"],
+		["dojo/NodeList-data", ""],
+		["dojo/NodeList-dom", ""],
+		["dojo/NodeList-fx", ""],
+		["dojo/NodeList-html", ""],
+		["dojo/NodeList-traverse", ""],
+
+		["dojo/data/ObjectStore", "ObjectStore"],
+		["dojo/store/DataStore", "DataStore"],
+		["dojo/store/Memory", "Memory"],
+		["dojo/store/JsonRest", "JsonRest"],
+		["dojo/store/Observable", "Observable"],
+		["dojo/store/Cache", "Cache"],
+		["dojo/store/util/SimpleQueryEngine", "SimpleQueryEngine"],
+		["dojo/store/util/QueryResults", "QueryResults"],
+
+		["dojo/text!", "template"],
+		["dojo/i18n!", "XXX"],
+		["dojo/domReady!", ""],
+
+		// ********************************
+		// dijit module ids go here
+		// ********************************
+		["dijit/_Container", "_Container"],
+		["dijit/_Contained", "_Contained"],
+		["dijit/_WidgetBase", "_WidgetBase"],
+		["dijit/_MenuBase", "_MenuBase"],
+		["dijit/_TemplatedMixin", "_TemplatedMixin"],
+		["dijit/_WidgetsInTemplateMixin", "_WidgetsInTemplateMixin"],
+		["dijit/_AttachMixin", "_AttachMixin"],
+		["dijit/_CssStateMixin", "_CssStateMixin"],
+		["dijit/_OnDijitClickMixin", "_OnDijitClickMixin"],
+		["dijit/_FocusMixin", "_FocusMixin"],
+		["dijit/_DialogMixin", "_DialogMixin"],
+		["dijit/_PaletteMixin", "_PaletteMixin"],
+		["dijit/_KeyNavMixin", "_KeyNavMixin"],
+		["dijit/_KeyNavMixinContainer", "_KeyNavMixinContainer"],
+
+		// ********************************
+		// dojox module ids go here
+		// ********************************
+		["dojox/grid", "Grid"],
+		["dojox/lang/functional", "functional"]
+	],
+
+	// ********************************
+	// aerohive module ids go here
+	// ********************************
+	"hive_mids": [
+		["ah/AHWidget", "AHWidget"],
+		["ah/app/controllers/DevicesController", "DevicesController"],
+		["ah/config/validateRules", "rules"],
+		["ah/config/gridStructure", "structs"],
+		["ah/comp/maps/MapConstant", "MapConstant"],
+		["ah/comp/devicemanagement/DeviceManagement", "DeviceManagement"],
+
+		["ah/util/AHGrid", "AHGrid"],
+		["ah/util/form/Grid", "Grid"],
+		["ah/util/AHComponent", "AHComponent"],
+		["ah/util/layout/list/ChosenList", "ChosenList"],
+		["ah/util/form/Validate", "Validate"],
+
+		["ah/util/form/objects/ObjectBase", "ObjectBase"],
+		["ah/util/form/objects/ObjectFormBase", "ObjectFormBase"],
+		["ah/util/form/objects/IPObject", "IPObject"],
+		["ah/util/form/objects/IPObjectForm", "IPObjectForm"],
+		["ah/util/form/objects/VLANObject", "VLANObject"],
+		["ah/util/form/objects/VLANObjectForm", "VLANObjectForm"],
+		["ah/util/form/objects/MACObject", "MACObject"],
+		["ah/util/form/objects/MACObjectForm", "MACObjectForm"],
+		["ah/util/form/objects/BonjourServiceObject", "BonjourServiceObject"],
+		["ah/util/form/objects/BonjourServiceObjectForm", "BonjourServiceObjectForm"],
+		["ah/util/form/objects/VLANGroupObject", "VLANGroupObject"],
+		["ah/util/form/objects/VLANGroupObjectForm", "VLANGroupObjectForm"]
+	],
+
+	// ********************************
+	// other module ids go here
+	// ********************************
+	"misc_mids": []
+}

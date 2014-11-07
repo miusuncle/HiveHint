@@ -1,0 +1,4 @@
+[
+	{ "caption": "-", "id": "file" },
+	{ "caption": "", "command": "pick_asset_ref" }
+]

@@ -1,0 +1,34 @@
+[
+	{
+		"keys": ["alt+q"],
+		"command": "goto_anyplace"
+	},
+	{
+		"keys": ["alt+shift+q"],
+		"command": "goto_anyplace",
+		"args": { "symbol_mode": true }
+	},
+
+	{
+		"keys": ["shift+space"],
+		"command": "insert_module_id",
+		"context": [{ "key": "selector", "operand": "equal", "operand": "source.js, text.html" }]
+	},
+	{
+		"keys": ["alt+shift+space"],
+		"command": "goto_module_definition"
+	},
+	{
+		"keys": ["ctrl+alt+space"],
+		"command": "open_file",
+		"args": { "file": "${packages}/HiveHint/HiveHint.sublime-settings" }
+	},
+
+	{
+		"keys": ["ctrl+alt+shift+space"],
+		"command": "open_file",
+		"args": { "file": "${packages}/HiveHint/completions/dojo.sublime-completions" }
+	},
+
+	{ "keys": ["alt+shift+y"], "command": "pick_asset_ref" }
+]

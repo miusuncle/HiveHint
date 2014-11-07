@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+data-dojo-attach-event="$0"
+]]></content>
+	<scope>text.html</scope>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+require([
+	$1$2
+], function (
+	$1
+) {
+	$0
+});
+]]></content>
+	<tabTrigger>rq</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

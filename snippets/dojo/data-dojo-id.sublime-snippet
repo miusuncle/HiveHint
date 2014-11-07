@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+data-dojo-id="$0"
+]]></content>
+	<tabTrigger>ddid</tabTrigger>
+	<scope>text.html</scope>
+</snippet>
