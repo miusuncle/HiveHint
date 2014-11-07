@@ -1,11 +1,11 @@
 [
 	{
 		"keys": ["alt+q"],
-		"command": "goto_anyplace"
+		"command": "goto_anywhere"
 	},
 	{
 		"keys": ["alt+shift+q"],
-		"command": "goto_anyplace",
+		"command": "goto_anywhere",
 		"args": { "symbol_mode": true }
 	},
 

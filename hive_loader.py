@@ -5,15 +5,11 @@ import re
 
 class HiveLoader():
 	def __init__(self):
-		self.PREFER_DART = True
 		self.FOLDERS = []
 		self.MIDS = []
 
 	def load(self):
 		settings = sublime.load_settings('HiveHint.sublime-settings')
-
-		# inject `PREFER_DART`
-		self.PREFER_DART = settings.get('prefer_dart', True)
 
 		# inject `FOLDERS`
 		for folder in settings.get('scripts_root', []):

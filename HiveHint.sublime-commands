@@ -1,11 +1,11 @@
 [
 	{
 		"caption": "HiveHint: Reveal Underneath Module Definition",
-		"command": "goto_anyplace"
+		"command": "goto_anywhere"
 	},
 	{
 		"caption": "HiveHint: Goto Symbol Definition",
-		"command": "goto_anyplace",
+		"command": "goto_anywhere",
 		"args": { "symbol_mode": true }
 	},
 

@@ -29,7 +29,6 @@ class HiveHintEventListener(sublime_plugin.EventListener):
 			if dir_name in [HIVE_NAME, 'User']:
 				self.reload_plugin_async('hive_loader', 400)
 				self.reload_plugin_async('PickAssetRef', 600)
-				self.reload_plugin_async('GotoAnyplace', 800)
 				self.reload_plugin_async('ModuleIdHint', 1000)
 
 	def reload_plugin_async(self, plugin_name, delay):

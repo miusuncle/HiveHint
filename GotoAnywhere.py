@@ -1,16 +1,7 @@
 import sublime, sublime_plugin
 import re
 
-# ============================================================
-if int(sublime.version()) >= 3000:
-	from .hive_loader import hive_loader
-else:
-	from hive_loader import hive_loader
-
-PREFER_DART = hive_loader.PREFER_DART
-# ============================================================
-
-class GotoAnyplaceCommand(sublime_plugin.WindowCommand):
+class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 	def run(self, **args):
 		self.gte_st3 = int(sublime.version()) >= 3000
 		self.symbol_mode = args.get('symbol_mode', False)
@@ -102,10 +93,13 @@ class GotoAnyplaceCommand(sublime_plugin.WindowCommand):
 		if not locations:
 			sublime.status_message('Unable to find ' + symbol)
 		else:
+			settings = sublime.load_settings('HiveHint.sublime-settings')
+			prefer_dart = settings.get('prefer_dart', True)
+
 			locations = self.sorted_locations(locations)
 			self.locations = locations
 
-			if PREFER_DART and len(locations) == 1:
+			if prefer_dart and len(locations) == 1:
 				self.open_file(0)
 			else:
 				window.show_quick_panel(

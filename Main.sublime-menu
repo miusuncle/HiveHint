@@ -6,11 +6,11 @@
 			"children": [
 				{
 					"caption": "Reveal Underneath Module Definition",
-					"command": "goto_anyplace"
+					"command": "goto_anywhere"
 				},
 				{
 					"caption": "Goto Symbol Definition",
-					"command": "goto_anyplace",
+					"command": "goto_anywhere",
 					"args": { "symbol_mode": true }
 				},
 
