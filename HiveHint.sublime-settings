@@ -112,19 +112,29 @@
 		// dojox module ids go here
 		// ********************************
 		["dojox/grid", "Grid"],
-		["dojox/lang/functional", "functional"]
+		["dojox/lang/functional", "df"]
 	],
 
 	// ********************************
 	// aerohive module ids go here
 	// ********************************
 	"hive_mids": [
+		["ah/util/common/Base", "Base"],
+		["ah/util/common/ModuleBase", "ModuleBase"],
 		["ah/AHWidget", "AHWidget"],
 		["ah/app/controllers/DevicesController", "DevicesController"],
 		["ah/config/validateRules", "rules"],
 		["ah/config/gridStructure", "structs"],
+
 		["ah/comp/maps/MapConstant", "MapConstant"],
 		["ah/comp/devicemanagement/DeviceManagement", "DeviceManagement"],
+		["ah/comp/devicemanagement/DeviceList", "DeviceList"],
+		["ah/comp/configuration/additional/AddBonjourFilterRule", "AddBonjourFilterRule"],
+		["ah/comp/configuration/additional/BonjourGatewaySettings", "BonjourGatewaySettings"],
+		["ah/comp/devicemanagement/BonjourGatewayConfiguration", "BonjourGatewayConfiguration"],
+		["ah/comp/configuration/assignment/UserAssignment", "UserAssignment"],
+		["ah/comp/configuration/UserProfileMgmt", "UserProfileMgmt"],
+		["ah/comp/configuration/SSIDDetailsForm", "SSIDDetailsForm"],
 
 		["ah/util/AHGrid", "AHGrid"],
 		["ah/util/form/Grid", "Grid"],
