@@ -47,6 +47,8 @@ class PickAssetRefCommand(sublime_plugin.WindowCommand):
 
 	def get_relative_path(self):
 		view = self.window.active_view()
+		if not view: return ''
+
 		file_name = view.file_name() or ''
 		FOLDERS.extend(self.window.folders())
 

@@ -90,5 +90,8 @@ class SyntaxViewer():
 		return self.get_syntax() == 'html'
 
 	def get_syntax(self):
-		syntax = self.view.settings().get('syntax')
+		view = self.view
+		if not view: return 'unknown'
+
+		syntax = view.settings().get('syntax')
 		return syntax.split('/')[-1].split('.')[0].lower()
