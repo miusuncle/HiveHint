@@ -108,9 +108,17 @@
 		["dijit/_KeyNavMixin", "_KeyNavMixin"],
 		["dijit/_KeyNavMixinContainer", "_KeyNavMixinContainer"],
 
+		["dijit/layout/_LayoutWidget", "_LayoutWidget"],
+		["dijit/layout/BorderContainer", "BorderContainer"],
+		["dijit/layout/StackController", "StackController"],
+		["dijit/layout/TabContainer", "TabContainer"],
+		["dijit/layout/AccordionContainer", "AccordionContainer"],
+		["dijit/layout/ContentPane", "ContentPane"],
+
 		// ********************************
 		// dojox module ids go here
 		// ********************************
+		["dojox/layout/ExpandoPane", "ExpandoPane"],
 		["dojox/grid", "Grid"],
 		["dojox/lang/functional", "df"]
 	],
@@ -119,9 +127,12 @@
 	// aerohive module ids go here
 	// ********************************
 	"hive_mids": [
+		["ah/comp/configuration/IDMUserGroup", "IDMUserGroup"],
+		["ah/app/controllers/ConfigController", "ConfigController"],
+		["ah/AHWidget", "AHWidget"],
+		["ah/app/Application", "Application"],
 		["ah/util/common/Base", "Base"],
 		["ah/util/common/ModuleBase", "ModuleBase"],
-		["ah/AHWidget", "AHWidget"],
 		["ah/app/controllers/DevicesController", "DevicesController"],
 		["ah/config/validateRules", "rules"],
 		["ah/config/gridStructure", "structs"],
@@ -135,6 +146,8 @@
 		["ah/comp/configuration/assignment/UserAssignment", "UserAssignment"],
 		["ah/comp/configuration/UserProfileMgmt", "UserProfileMgmt"],
 		["ah/comp/configuration/SSIDDetailsForm", "SSIDDetailsForm"],
+		["ah/comp/configuration/additional/SyslogServer", "SyslogServer"],
+		["ah/comp/configuration/additional/LocationServer", "LocationServer"],
 
 		["ah/util/AHGrid", "AHGrid"],
 		["ah/util/form/Grid", "Grid"],
