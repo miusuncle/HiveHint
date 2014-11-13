@@ -2,7 +2,9 @@ import sublime, sublime_plugin
 from os import path
 
 # ============================================================
-if int(sublime.version()) >= 3000:
+gte_st3 = int(sublime.version()) >= 3000
+
+if gte_st3:
 	from .hive_loader import hive_loader
 else:
 	from hive_loader import hive_loader

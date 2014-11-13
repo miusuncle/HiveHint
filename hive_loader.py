@@ -1,7 +1,12 @@
 import sublime
 from itertools import groupby
-from os import path
-import re
+
+gte_st3 = int(sublime.version()) >= 3000
+
+if gte_st3:
+	from .hive_util import HiveUtil as HU
+else:
+	from hive_util import HiveUtil as HU
 
 class HiveLoader():
 	def __init__(self):
@@ -13,13 +18,7 @@ class HiveLoader():
 
 		# inject `FOLDERS`
 		for folder in settings.get('scripts_root', []):
-			folder = str(folder).rstrip('\/\\')
-
-			if sublime.platform() == 'windows':
-				folder = path.normpath(folder)
-				folder = re.sub(r'^\\([A-Za-z])(?=\\)', r'\1:', folder)
-
-			self.FOLDERS.append(folder)
+			self.FOLDERS.append(HU.normalize_path(folder))
 
 		# inject `MIDS`
 		for key in ('dojo_mids', 'hive_mids', 'misc_mids'):

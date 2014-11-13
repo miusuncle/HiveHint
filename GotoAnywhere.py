@@ -2,9 +2,17 @@ import sublime, sublime_plugin
 import re
 from os import path
 
+gte_st3 = int(sublime.version()) >= 3000
+
+if gte_st3:
+	from .hive_loader import hive_loader
+	from .hive_util import HiveUtil as HU
+else:
+	from hive_loader import hive_loader
+	from hive_util import HiveUtil as HU
+
 class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 	def run(self, **args):
-		self.gte_st3 = int(sublime.version()) >= 3000
 		self.symbol_mode = args.get('symbol_mode', False)
 		self.saved_view = self.window.active_view()
 
@@ -13,7 +21,7 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 		text = self.get_text(region)
 
 		if self.symbol_mode:
-			if self.gte_st3:
+			if gte_st3:
 				self.goto_symbol(text)
 			else:
 				sublime.status_message('Please upgrade to Sublime Text 3 to use `Goto Symbol Definition` feature.')
@@ -63,7 +71,7 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 		return text.strip('\/.\n')[:100]
 
 	def revise_region(self, region, inc_a, inc_b):
-		if self.gte_st3:
+		if gte_st3:
 			region.a += inc_a
 			region.b += inc_b
 
@@ -76,11 +84,7 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 
 	def goto_anything(self, text):
 		result = self.file_exists(text)
-
-		if result:
-			self.window.open_file(result)
-		else:
-			self.show_overlay(text)
+		self.window.open_file(result) if result else self.show_overlay(text)
 
 	def file_exists(self, text):
 		file_name = self.saved_view.file_name() or ''
@@ -93,18 +97,9 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 			base_dir = (settings.get('scripts_root') or [''])[0]
 			ret_path = path.join(base_dir, text + '.js')
 
-		ret_path = self.normalize_path(ret_path)
+		ret_path = HU.normalize_path(ret_path)
 		if ret_path == file_name: return False
 		return ret_path if path.isfile(ret_path) else False
-
-	def normalize_path(self, input_path):
-		input_path = str(input_path).rstrip('\/\\')
-
-		if sublime.platform() == 'windows':
-			input_path = path.normpath(input_path)
-			input_path = re.sub(r'^\\([A-Za-z])(?=\\)', r'\1:', input_path)
-
-		return input_path
 
 	def show_overlay(self, text):
 		self.window.run_command('show_overlay', {
