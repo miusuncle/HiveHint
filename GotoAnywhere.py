@@ -1,5 +1,6 @@
 import sublime, sublime_plugin
 import re
+from os import path
 
 class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 	def run(self, **args):
@@ -74,6 +75,38 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 		return region
 
 	def goto_anything(self, text):
+		result = self.file_exists(text)
+
+		if result:
+			self.window.open_file(result)
+		else:
+			self.show_overlay(text)
+
+	def file_exists(self, text):
+		file_name = self.saved_view.file_name() or ''
+
+		if text.endswith('.html'):
+			dir_name = path.dirname(file_name)
+			ret_path = path.join(dir_name, text)
+		else:
+			settings = sublime.load_settings('HiveHint.sublime-settings')
+			base_dir = (settings.get('scripts_root') or [''])[0]
+			ret_path = path.join(base_dir, text + '.js')
+
+		ret_path = self.normalize_path(ret_path)
+		if ret_path == file_name: return False
+		return ret_path if path.isfile(ret_path) else False
+
+	def normalize_path(self, input_path):
+		input_path = str(input_path).rstrip('\/\\')
+
+		if sublime.platform() == 'windows':
+			input_path = path.normpath(input_path)
+			input_path = re.sub(r'^\\([A-Za-z])(?=\\)', r'\1:', input_path)
+
+		return input_path
+
+	def show_overlay(self, text):
 		self.window.run_command('show_overlay', {
 			'overlay': 'goto',
 			'text': text,
