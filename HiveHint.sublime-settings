@@ -119,7 +119,7 @@
 		// dojox module ids go here
 		// ********************************
 		["dojox/layout/ExpandoPane", "ExpandoPane"],
-		["dojox/grid", "Grid"],
+		["dojox/grid/EnhancedGrid", "EnhancedGrid"],
 		["dojox/lang/functional", "df"]
 	],
 
