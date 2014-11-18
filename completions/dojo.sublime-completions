@@ -11,11 +11,12 @@
 		{ "trigger": "lgextend", "contents": "lang.extend(${1:target}, ${2:source})" },
 		{ "trigger": "lgmixin", "contents": "lang.mixin(${1:target}, ${2:source})" },
 		{ "trigger": "lgpartial", "contents": "lang.partial(${1:method}${3:, ${2:params}})" },
-		{ "trigger": "lgreplace", "contents": "lang.replace(${1:tmpl}, ${2:map}, ${4:, ${3:pattern}})" },
+		{ "trigger": "lgreplace", "contents": "lang.replace(${1:tmpl}, ${2:map}${4:, ${3:pattern}})" },
 		{ "trigger": "lgtrim", "contents": "lang.trim(${1:str})" },
 		{ "trigger": "lgsetObject", "contents": "lang.setObject(${1:name}, ${2:value}${4:, ${3:context}})" },
 		{ "trigger": "lggetObject", "contents": "lang.getObject('${1:dotstr}'${3:, ${2:create?}}${5:, ${4:context}})" },
 
+		{ "trigger": "strescape", "contents": "string.escape(${1:str})" },
 		{ "trigger": "strpad", "contents": "string.pad(${1:text}, ${2:size}${4:, ${3:ch}}${6:, ${5:end?}})" },
 		{ "trigger": "strrep", "contents": "string.rep(${1:str}, ${2:num})" },
 		{ "trigger": "strsubstitute", "contents": "string.substitute(${1:tmpl}, ${2:map}${4:, ${3:transform}}${6:, ${5:formatter}})" },
