@@ -21,6 +21,7 @@
 		["dojo/_base/fx", "baseFx"],
 		["dojo/fx", "fx"],
 
+		["dojo/has", "has"],
 		["dojo/router", "router"],
 		["dojo/back", "back"],
 		["dojo/hash", "hash"],
@@ -115,10 +116,19 @@
 		["dijit/layout/AccordionContainer", "AccordionContainer"],
 		["dijit/layout/ContentPane", "ContentPane"],
 
+		["dijit/form/DropDownButton", "DropDownButton"],
+
+		["dijit/Tooltip", "Tooltip"],
+		["dijit/Dialog", "Dialog"],
+		["dijit/TooltipDialog", "TooltipDialog"],
+		["dijit/BackgroundIframe", "BackgroundIframe"],
+		["dijit/DialogUnderlay", "DialogUnderlay"],
+
 		// ********************************
 		// dojox module ids go here
 		// ********************************
 		["dojox/layout/ExpandoPane", "ExpandoPane"],
+		["dojox/grid/DataGrid", "DataGrid"],
 		["dojox/grid/EnhancedGrid", "EnhancedGrid"],
 		["dojox/lang/functional", "df"]
 	],
@@ -127,11 +137,31 @@
 	// aerohive module ids go here
 	// ********************************
 	"hive_mids": [
+		["ah/comp/configuration/radiusserver/UserDatabase", "UserDatabase"],
+		["ah/comp/configuration/radiusserver/ActiveDirManger", "ActiveDirManger"],
+		["ah/comp/configuration/radiusserver/ApprovedRadius", "ApprovedRadius"],
+		["ah/comp/configuration/radiusserver/SecurityOptions", "SecurityOptions"],
+		["ah/comp/configuration/radiusserver/AHRadiusServer", "AHRadiusServer"],
+		["ah/comp/configuration/radiusserver/AAAServerProfile", "AAAServerProfile"],
+		["ah/comp/configuration/radiusserver/LocalUsergroup", "LocalUsergroup"],
+		["ah/comp/configuration/radiusserver/LDAPServer", "LDAPServer"],
+
+		["ah/comp/configuration/AHRadiusServer", "AHRadiusServer"],
+		["ah/comp/configuration/assignment/LocalUserGroups", "LocalUserGroups"],
+		["ah/comp/configuration/assignment/RadiusAttribute", "RadiusAttribute"],
+		["ah/comp/configuration/AdditionalSettings", "AdditionalSettings"],
+
+		["ah/comp/configuration/AdvancedSecurityOptions", "AdvancedSecurityOptions"],
+
 		["ah/comp/configuration/IDMUserGroup", "IDMUserGroup"],
+		["ah/comp/configuration/UserAccountAuto", "UserAccountAuto"],
+		["ah/comp/configuration/UserAccountManual", "UserAccountManual"],
+
 		["ah/app/controllers/ConfigController", "ConfigController"],
 		["ah/AHWidget", "AHWidget"],
 		["ah/app/Application", "Application"],
 		["ah/util/common/Base", "Base"],
+		["ah/util/common/_AhMixin", "_AhMixin"],
 		["ah/util/common/ModuleBase", "ModuleBase"],
 		["ah/app/controllers/DevicesController", "DevicesController"],
 		["ah/config/validateRules", "rules"],
@@ -143,6 +173,7 @@
 		["ah/comp/configuration/additional/AddBonjourFilterRule", "AddBonjourFilterRule"],
 		["ah/comp/configuration/additional/BonjourGatewaySettings", "BonjourGatewaySettings"],
 		["ah/comp/devicemanagement/BonjourGatewayConfiguration", "BonjourGatewayConfiguration"],
+		["ah/comp/devicemanagement/Troubleshooting", "Troubleshooting"],
 		["ah/comp/configuration/assignment/UserAssignment", "UserAssignment"],
 		["ah/comp/configuration/UserProfileMgmt", "UserProfileMgmt"],
 		["ah/comp/configuration/SSIDDetailsForm", "SSIDDetailsForm"],
@@ -152,6 +183,8 @@
 		["ah/util/AHGrid", "AHGrid"],
 		["ah/util/form/Grid", "Grid"],
 		["ah/util/AHComponent", "AHComponent"],
+		["ah/util/layout/Menu", "Menu"],
+		["ah/util/Chosen", "Chosen"],
 		["ah/util/layout/list/ChosenList", "ChosenList"],
 		["ah/util/form/Validate", "Validate"],
 

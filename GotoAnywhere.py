@@ -93,8 +93,14 @@ class GotoAnywhereCommand(sublime_plugin.WindowCommand):
 			dir_name = path.dirname(file_name)
 			ret_path = path.join(dir_name, text)
 		else:
-			settings = sublime.load_settings('HiveHint.sublime-settings')
-			base_dir = (settings.get('scripts_root') or [''])[0]
+			folders = self.window.folders()
+
+			if folders:
+				base_dir = folders[0]
+			else:
+				settings = sublime.load_settings('HiveHint.sublime-settings')
+				base_dir = (settings.get('scripts_root') or [''])[0]
+
 			ret_path = path.join(base_dir, text + '.js')
 
 		ret_path = HU.normalize_path(ret_path)
