@@ -37,7 +37,7 @@ class HiveLoader():
 
 hive_loader = HiveLoader()
 
-if int(sublime.version()) >= 3000:
+if gte_st3:
 	def plugin_loaded():
 		global hive_loader
 		hive_loader.load()
