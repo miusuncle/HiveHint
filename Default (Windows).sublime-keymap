@@ -9,6 +9,8 @@
 		"args": { "symbol_mode": true }
 	},
 
+	{ "keys": ["f1"], "command": "toggle_module_template_view" },
+
 	{
 		"keys": ["shift+space"],
 		"command": "insert_module_id",
