@@ -1,4 +1,5 @@
 [
 	{ "caption": "-" },
+	{ "caption": "", "command": "toggle_module_template_view" },
 	{ "caption": "", "command": "pick_asset_ref" }
 ]

@@ -3,8 +3,13 @@ from os import path
 
 class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
 	def run(self):
-		window = self.window
-		filename = window.active_view().file_name() or ''
+		self.do_exec(False)
+
+	def is_visible(self):
+		return self.do_exec(True)
+
+	def do_exec(self, preflight):
+		filename = self.get_file_name()
 		destfile = ''
 
 		if filename.endswith('.html'):
@@ -21,4 +26,21 @@ class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
 			# get relevant html file
 			destfile = path.sep.join([dirname, 'templates', basename + '.html'])
 
-		if path.isfile(destfile): window.open_file(destfile)
+		if preflight:
+			return path.isfile(destfile)
+		else:
+			if path.isfile(destfile):
+				self.window.open_file(destfile)
+
+	def description(self):
+		filename = self.get_file_name()
+		file_ext = str(path.splitext(filename)[-1])
+
+		return ({
+			'.js': 'Open Relevant Template File',
+			'.html': 'Open Relevant Module File'
+		}).get(file_ext, 'ignore me')
+
+	def get_file_name(self):
+		view = self.window.active_view()
+		return (view.file_name() or '' if view else '')
