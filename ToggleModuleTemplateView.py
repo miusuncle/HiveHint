@@ -1,4 +1,4 @@
-import sublime_plugin
+import sublime, sublime_plugin
 from os import path
 
 class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
@@ -30,7 +30,7 @@ class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
 			return path.isfile(destfile)
 		else:
 			if path.isfile(destfile):
-				self.window.open_file(destfile)
+				self.window.open_file(destfile, sublime.ENCODED_POSITION)
 
 	def description(self):
 		filename = self.get_file_name()
