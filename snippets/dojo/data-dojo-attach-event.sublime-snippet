@@ -2,5 +2,6 @@
 	<content><![CDATA[
 data-dojo-attach-event="$0"
 ]]></content>
+	<tabTrigger>ddae</tabTrigger>
 	<scope>text.html</scope>
 </snippet>
