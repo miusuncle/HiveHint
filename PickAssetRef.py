@@ -52,9 +52,9 @@ class PickAssetRefCommand(sublime_plugin.WindowCommand):
 		if not view: return ''
 
 		file_name = view.file_name() or ''
-		FOLDERS.extend(self.window.folders())
+		folders = self.window.folders() + FOLDERS
 
-		for folder in FOLDERS:
+		for folder in folders:
 			if file_name.startswith(folder):
 				file_name = file_name.partition(folder + path.sep)[-1]
 				return file_name.replace('\\', '/')
