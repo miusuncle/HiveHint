@@ -19,12 +19,19 @@ class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
 			dirname = path.split(dirname)[0]
 			# get relevant js file
 			destfile = path.sep.join([dirname, basename + '.js'])
+			
+		if filename.endswith('.tpl'):
+			# basename without extension
+			dirname, basename = path.split(path.splitext(filename)[0])
+			# get relevant js file
+			destfile = path.sep.join([dirname, basename + '.js'])
 
 		if filename.endswith('.js'):
 			# basename without extension
 			dirname, basename = path.split(path.splitext(filename)[0])
 			# get relevant html file
-			destfile = path.sep.join([dirname, 'templates', basename + '.html'])
+			# destfile = path.sep.join([dirname, 'templates', basename + '.html'])
+			destfile = path.sep.join([dirname, basename + '.tpl'])
 
 		if preflight:
 			return path.isfile(destfile)
@@ -38,7 +45,8 @@ class ToggleModuleTemplateViewCommand(sublime_plugin.WindowCommand):
 
 		return ({
 			'.js': 'Open Relevant Template File',
-			'.html': 'Open Relevant Module File'
+			'.html': 'Open Relevant Module File',
+			'.tpl': 'Open Relevant Module File'
 		}).get(file_ext, 'ignore me')
 
 	def get_file_name(self):
